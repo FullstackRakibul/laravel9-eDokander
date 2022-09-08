@@ -142,13 +142,13 @@
 									<a href="{{route('aboutus')}}" class="link-term mercado-item-title">About Us</a>
 								</li>
 								<li class="menu-item">
-									<a href="shop.html" class="link-term mercado-item-title">Shop</a>
+									<a href="{{route('shop')}}" class="link-term mercado-item-title">Shop</a>
 								</li>
 								<li class="menu-item">
-									<a href="cart.html" class="link-term mercado-item-title">Cart</a>
+									<a href="{{route('privacypolicy')}}" class="link-term mercado-item-title">Privacy and Policy </a>
 								</li>
 								<li class="menu-item">
-									<a href="checkout.html" class="link-term mercado-item-title">Checkout</a>
+									<a href="{{route('termsandcondition')}}" class="link-term mercado-item-title">Terms & Condition </a>
 								</li>
 								<li class="menu-item">
 									<a href="{{route('contact')}}" class="link-term mercado-item-title">Contact Us</a>

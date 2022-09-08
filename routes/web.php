@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', '\App\Http\Controllers\HomeController@index')->name('home');
-Route::get('/about', '\App\Http\Controllers\frontend\AboutController@aboutus')->name('aboutus');
-Route::get('/contact','\App\Http\Controllers\frontend\ContactController@contactus')->name('contact');
+// Frontend All Routes .........................................
+
+Route::get('/', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
+Route::get('/aboutus', [\App\Http\Controllers\frontend\AboutController::class,'aboutus'])->name('aboutus');
+Route::get('/contactus', [\App\Http\Controllers\frontend\ContactController::class,'contactus'])->name('contact');
+Route::get('/shop', [\App\Http\Controllers\frontend\ShopController::class,'shop'])->name('shop');
+Route::get('termsandcondition',[\App\Http\Controllers\frontend\TermsAndConditionController::class,'termsAndCondition'])->name('termsandcondition');
+Route::get('privacypolicy',[\App\Http\Controllers\frontend\PrivacyPolicyController::class,'privacyPolicy'])->name('privacypolicy');
+
+
+
+// Backend All Routes .........................................
