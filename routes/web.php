@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* --------------Admin Route Starts --------------- */
+
+//Route::prefix('admin')->group(function (){
+//    Route::get('/login'),[];
+//});
+
+/* --------------Admin Route Ends --------------- */
+
+
 Route::get('/', function () {
     return view('welcome');
 });
