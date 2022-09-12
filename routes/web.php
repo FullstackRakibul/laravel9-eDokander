@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 /* --------------Admin Route Starts --------------- */
 
-//Route::prefix('admin')->group(function (){
-//    Route::get('/login'),[];
-//});
+Route::prefix('admin')->group(function (){
+    Route::get('/login',[AdminController::class,'Index'])->name('login_form');
+    Route::get('/login/owner',[AdminController::class,'Login'])->name('admin.login');
+    Route::get('/dashboard',[AdminController::class,'Dashboard'])->name('admin.dashboard');
+});
 
 /* --------------Admin Route Ends --------------- */
 
