@@ -7,21 +7,28 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function Index(){
+//    public function Index(){
+//
+//
+//        return view();
+//    }
+//
+//    public function Login(){
+//
+//
+//        return view();
+//    }
+//
+//    public function Dashboard(){
+//
+//
+//        return view();
+//    }
+
+    public function admintest(){
 
 
-        return view();
+        return view('layouts.backend');
     }
 
-    public function Login(){
-
-
-        return view();
-    }
-
-    public function Dashboard(){
-
-
-        return view();
-    }
 }
