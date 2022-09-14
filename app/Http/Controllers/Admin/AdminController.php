@@ -28,7 +28,7 @@ class AdminController extends Controller
     public function admintest(){
 
 
-        return view('layouts.backend');
+        return view('admin.dashboard');
     }
 
 }
