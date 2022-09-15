@@ -18,8 +18,8 @@ use App\Http\Controllers\Admin\AdminController;
 
 Route::prefix('admin')->group(function (){
     Route::get('/login',[AdminController::class,'Index'])->name('login_form');
-    Route::get('/login/owner',[AdminController::class,'Login'])->name('admin.login');
-    Route::get('/dashboard',[AdminController::class,'Dashboard'])->name('admin.dashboard');
+    Route::post('/login/owner',[AdminController::class,'Login'])->name('admin.login');
+    Route::get('/dashboard',[AdminController::class,'Dashboard'])->name('admin.dashboard')->middleware('admin');
 });
 
 /* --------------Admin Route Ends --------------- */
@@ -34,6 +34,3 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-
-
-Route::get('/admintest',[AdminController::class,'admintest'])->name('admintest');
